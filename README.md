@@ -1,0 +1,1 @@
+DeciMate is your go-to decision-making companion, designed to simplify choices and enhance decision processes.
