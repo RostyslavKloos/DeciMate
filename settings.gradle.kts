@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google()
         mavenCentral()
@@ -15,4 +16,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "DeciMate"
 include(":app")
- 
+include(":designsystem")

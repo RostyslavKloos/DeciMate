@@ -1,4 +1,4 @@
-package ua.rodev.decimate.ui.theme
+package ua.rodev.designsystem.theme
 
 import androidx.compose.ui.graphics.Color
 
