@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.decimate.android.application)
     alias(libs.plugins.decimate.android.hilt)
+    alias(libs.plugins.decimate.android.detekt)
 }
 
 android {

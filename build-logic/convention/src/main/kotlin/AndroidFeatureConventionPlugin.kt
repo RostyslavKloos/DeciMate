@@ -8,8 +8,8 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             pluginManager.apply {
-                apply("wallpaper.android.library")
-                apply("wallpaper.android.hilt")
+                apply(libs.plugins.decimate.android.hilt.get().pluginId)
+                apply(libs.plugins.decimate.android.library.asProvider().get().pluginId)
             }
             dependencies {
                 add("implementation", project(":designsystem"))

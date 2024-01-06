@@ -13,6 +13,7 @@ hilt = "2.50"
 kotlin-coroutines = "1.7.3"
 ksp = "1.9.21-1.0.16"
 androidxComposeCompiler = "1.5.7"
+detekt = "1.23.4" # https://detekt.dev/docs/gettingstarted/gradle/
 
 #App
 minSdk = "23"
@@ -20,6 +21,7 @@ targetSdk = "34"
 compileSdk = "34"
 
 [libraries]
+
 #Core
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
 lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle-runtime-ktx" }
@@ -53,7 +55,6 @@ compose-navigation = { group = "androidx.navigation", name = "navigation-compose
 # Hilt
 #hilt-android-testing = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hilt" }
 #hilt-ext-compiler = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "hiltExt" }
-
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
 hilt-gradle-plugin = { group = "com.google.dagger", name = "hilt-android-gradle-plugin", version.ref = "hilt" }
@@ -61,11 +62,16 @@ hilt-gradle-plugin = { group = "com.google.dagger", name = "hilt-android-gradle-
 android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "app" }
 kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 
+# Linters
+detekt-gradle-plugin = { group = "io.gitlab.arturbosch.detekt", name = "detekt-gradle-plugin", version.ref = "detekt" }
+detekt-ruleset-ktlint = { group = "io.gitlab.arturbosch.detekt", name = "detekt-formatting", version.ref = "detekt" }
+
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "app" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
-
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+detekt-compiler = { id = "io.github.detekt.gradle.compiler-plugin", version.ref = "detekt" }
 org-jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 
 #Plugins defined by this project
@@ -78,4 +84,5 @@ decimate-android-library-compose = { id = "decimate.android.library.compose", ve
 decimate-android-lint = { id = "decimate.android.lint", version = "unspecified" }
 decimate-android-room = { id = "decimate.android.room", version = "unspecified" }
 decimate-android-test = { id = "decimate.android.test", version = "unspecified" }
+decimate-android-detekt = { id = "decimate.android.detekt", version = "unspecified" }
 decimate-jvm-library = { id = "decimate.jvm.library", version = "unspecified" }
